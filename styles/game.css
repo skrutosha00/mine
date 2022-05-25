@@ -1,0 +1,404 @@
+body {
+  overflow: hidden;
+}
+
+.warning {
+  width: 50%;
+  height: 50%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 18, 82, 0.85) 100%
+  );
+  font-size: 3vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+
+  transition: left 0.5s ease;
+}
+
+.again {
+  background-image: url("../png/stone.png");
+  width: 50%;
+  height: 20%;
+}
+
+.score {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 32px;
+}
+
+.balance_field {
+  top: 3%;
+  left: 23%;
+}
+
+.home {
+  background-image: url("../png/menu_button.png");
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  width: 150px;
+  height: 50px;
+}
+
+.menu {
+  background-image: url("../png/big_frame.png");
+  width: 280px;
+  height: 292px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: absolute;
+  left: 3%;
+  bottom: 3%;
+}
+
+.bet_amount_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+  margin-top: 20%;
+}
+
+.control {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 6%;
+}
+
+.control > div {
+  background-image: url("../png/circle.png");
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.min,
+.max {
+  font-size: 12px;
+}
+
+.play_button {
+  background-image: url("../png/play_button.png");
+  width: 150px;
+  height: 50px;
+  margin-top: 3%;
+}
+
+.play_button span {
+  margin-bottom: 5%;
+  margin-left: 19%;
+  font-size: 18px;
+}
+
+.level_cont {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 2%;
+}
+
+.level {
+  background-image: url("../png/circle.png");
+  position: relative;
+  width: 55px;
+  height: 55px;
+}
+
+.level.chosen {
+  background-image: url("../png/bright_circle.png");
+}
+
+.level img {
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  transform: rotate(-55deg);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 3;
+}
+
+.game {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  width: 55%;
+  height: 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.layer_cont {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  transition: top 0.5s ease;
+}
+
+.stone {
+  background-image: url("../png/stone.png");
+  width: 24%;
+  height: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.miner {
+  width: 71px;
+  height: 95px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  transform: translate(0, -100%);
+
+  transition: left 0.3s ease, top 0.5s ease;
+}
+
+.miner img {
+  width: 100%;
+  height: 100%;
+}
+
+.move {
+  width: 140% !important;
+}
+
+.dead {
+  width: 90px;
+  height: 60px;
+}
+
+.bomb {
+  position: absolute;
+  top: 0;
+
+  max-width: 60px;
+  max-height: 60px;
+  transform: translate(-50%, 0);
+
+  transition: opacity 0.3s ease;
+}
+
+.reward_cont {
+  background-image: url("../png/explosion.png");
+
+  width: 120px;
+  height: 120px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+
+  transition: top 0.5s ease, opacity 0.3s ease;
+}
+
+.reward_cont img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.bonus {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  width: 73px;
+  height: 58px;
+}
+
+.bonus.abled {
+  background-image: url("../png/cut_button.png");
+}
+
+.bonus.disabled {
+  background-image: url("../png/disabled_cut_button.png");
+}
+
+.bonus img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.bonus * {
+  margin-top: 10px;
+}
+
+.loupe {
+  right: 15%;
+}
+
+.half {
+  right: 3%;
+}
+
+@media screen and (max-width: 730px) {
+  .game {
+    width: 45%;
+  }
+
+  .home,
+  .balance_field {
+    width: 100px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-height: 325px) {
+  .miner {
+    width: 55px;
+    height: 71px;
+  }
+
+  .menu {
+    background-image: url("../png/frame.png");
+    width: 270px;
+    height: 250px;
+  }
+
+  .bet_amount_cont {
+    margin-top: 2.5%;
+  }
+
+  .loupe {
+    right: 17%;
+  }
+}
+
+@media screen and (min-height: 600px) {
+  /* .home,
+  .balance_field {
+    width: 190px;
+    height: 67px;
+  } */
+
+  .miner {
+    width: 86px;
+    height: 105px;
+  }
+}
+
+@media screen and (min-height: 768px) {
+  .menu {
+    width: 355px;
+    height: 353px;
+  }
+
+  .play_button {
+    width: 180px;
+    height: 60px;
+  }
+
+  .control > div {
+    width: 55px;
+    height: 55px;
+  }
+
+  .level {
+    width: 65px;
+    height: 65px;
+  }
+
+  .stone {
+    height: 50px;
+  }
+
+  .reward_cont {
+    width: 200px;
+    height: 200px;
+  }
+
+  .miner {
+    width: 113px;
+    height: 128px;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .home,
+  .balance_field {
+    width: 190px;
+    height: 66px;
+  }
+
+  .balance_field {
+    top: 2%;
+  }
+
+  .balance {
+    font-size: 28px;
+  }
+
+  .miner {
+    width: 142px;
+    height: 162px;
+  }
+
+  .bonus {
+    width: 146px;
+    height: 116px;
+  }
+
+  .bonus * {
+    margin-top: 25px;
+    font-size: 32px;
+  }
+
+  .menu {
+    width: 450px;
+    height: 465px;
+  }
+
+  .control > div {
+    width: 75px;
+    height: 75px;
+    font-size: 21px;
+  }
+
+  .level {
+    width: 85px;
+    height: 85px;
+  }
+
+  .level span {
+    font-size: 32px;
+  }
+
+  .play_button {
+    width: 200px;
+    height: 70px;
+  }
+
+  .bet_amount_cont {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .miner {
+    width: 162px;
+    height: 194px;
+  }
+}

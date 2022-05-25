@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "IBM";
+  src: url("../IBMPlexSerif-Regular.ttf");
+}
+
+body {
+  background-image: url("../png/back.png");
+  background-size: cover;
+  height: 100vh;
+
+  font-family: "IBM";
+  font-style: normal;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.block {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balance_field {
+  background-image: url("../png/balance.png");
+  justify-content: right;
+  position: absolute;
+  width: 150px;
+  height: 45px;
+}
+
+.balance {
+  margin-right: 10%;
+  transition: color 0.5s ease;
+}
+
+.balance.anim {
+  color: red;
+}

@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.miner {
+  max-height: 75%;
+  max-width: 50%;
+}
+
+.menu {
+  width: 30%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  width: 100%;
+  height: 40%;
+  background-image: url("../png/stone.png");
+  font-size: 25px;
+}
+
+@media screen and (min-height: 600px) {
+  .button {
+    font-size: 60px;
+  }
+}

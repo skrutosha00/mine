@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.balance_field {
+  bottom: 0;
+  left: 20%;
+}
+
+.miner {
+  max-height: 75%;
+  max-width: 50%;
+}
+
+.shop {
+  background-image: url("../png/frame.png");
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  width: 50%;
+  height: 85%;
+}
+
+.bonus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+  width: 45%;
+}
+
+.info {
+  margin-top: 12px;
+  height: 40px;
+  font-size: 2vw;
+  color: #755400;
+}
+
+.logo {
+  background-image: url("../png/circle.png");
+  width: 120px;
+  height: 115px;
+}
+
+.logo img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.logo span {
+  font-size: 4vw;
+}
+
+.button {
+  background-image: url("../png/play_button.png");
+  width: 150px;
+  height: 50px;
+}
+
+.button span {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.home {
+  background-image: url("../png/menu_button.png");
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 50%);
+  width: 150px;
+  height: 50px;
+}
+
+@media screen and (min-height: 600px) {
+  .bonus {
+    height: 55%;
+  }
+
+  .balance_field {
+    width: 300px;
+    height: 90px;
+    font-size: 36px;
+  }
+
+  .logo span {
+    font-size: 3vw;
+  }
+
+  .button,
+  .home {
+    width: 200px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .logo span {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .bonus {
+    height: 40%;
+  }
+}

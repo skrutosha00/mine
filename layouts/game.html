@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, width=device-width, viewport-fit=cover"
+    />
+    <link rel="shortcut icon" href="./png/icon.png" />
+    <link rel="stylesheet" href="../styles/common_style.css" />
+    <link rel="stylesheet" href="../styles/game.css" />
+    <title>Dry Slo</title>
+  </head>
+  <body>
+    <div class="warning">
+      <div class="text"></div>
+      <div class="again block">PLAY AGAIN</div>
+    </div>
+
+    <div class="bonus loupe block">
+      <img src="../png/loupe.png" alt="loupe" />
+    </div>
+    <div class="bonus half block"><span>50/50</span></div>
+
+    <a href="./main.html" class="home block"></a>
+    <div class="balance_field block"></div>
+    <div class="score">x1</div>
+
+    <div class="menu block">
+      <div class="bet_amount_cont">
+        <div>BET:</div>
+        <div class="bet_amount">0</div>
+      </div>
+      <div class="control">
+        <div class="min block">MIN</div>
+        <div class="minus block">-</div>
+        <div class="plus block">+</div>
+        <div class="max block">MAX</div>
+      </div>
+      <div class="play_button block"><span>PLAY</span></div>
+      <div class="level_cont">
+        <div class="level block chosen">
+          <span>1</span>
+          <img src="../png/bomb.png" alt="bomb" />
+        </div>
+        <div class="level block">
+          <span>2</span>
+          <img src="../png/bomb.png" alt="bomb" />
+        </div>
+        <div class="level block">
+          <span>3</span>
+          <img src="../png/bomb.png" alt="bomb" />
+        </div>
+      </div>
+      <span>Level</span>
+    </div>
+    <div class="game">
+      <div class="miner">
+        <img src="../png/miner.png" alt="miner" />
+      </div>
+    </div>
+    <script src="../scripts/game.js" type="module"></script>
+  </body>
+</html>
