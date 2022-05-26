@@ -86,9 +86,9 @@ document.querySelector('.again').onclick = () => {
             div.remove()
         }
     }
-
-    minerCont.classList.remove('dead')
+    
     miner.src = '../png/miner.png'
+    miner.classList.remove('dead')
 
     layers = 0
     createLayer()
@@ -178,14 +178,13 @@ function fall() {
 }
 
 function die() {
+    miner.classList.add('fall')
     miner.src = '../png/fall.gif'
-    miner.classList.add('move')
 
     return new Promise(resolve => {
         setTimeout(() => {
             miner.src = '../png/dead_miner.png'
-            miner.classList.remove('move')
-            minerCont.classList.add('dead')
+            miner.classList.replace('fall', 'dead')
             resolve('ok')
         }, 500);
     })

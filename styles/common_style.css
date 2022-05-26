@@ -43,7 +43,7 @@ a {
 
 .balance_field {
   background-image: url("../png/balance.png");
-  justify-content: right;
+  justify-content: flex-end;
   position: absolute;
   width: 150px;
   height: 45px;

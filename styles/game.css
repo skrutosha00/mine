@@ -1,7 +1,3 @@
-body {
-  overflow: hidden;
-}
-
 .warning {
   width: 50%;
   height: 50%;
@@ -165,6 +161,9 @@ body {
 }
 
 .miner {
+  display: flex;
+  align-items: flex-end;
+
   width: 71px;
   height: 95px;
 
@@ -178,17 +177,20 @@ body {
 }
 
 .miner img {
-  width: 100%;
   height: 100%;
 }
 
 .move {
-  width: 140% !important;
+  width: auto !important;
+}
+
+.fall {
+  height: 75% !important;
+  width: auto !important;
 }
 
 .dead {
-  width: 90px;
-  height: 60px;
+  height: 50% !important;
 }
 
 .bomb {
@@ -222,7 +224,7 @@ body {
 }
 
 .bonus {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   bottom: 0;
   width: 73px;
@@ -288,12 +290,6 @@ body {
 }
 
 @media screen and (min-height: 600px) {
-  /* .home,
-  .balance_field {
-    width: 190px;
-    height: 67px;
-  } */
-
   .miner {
     width: 86px;
     height: 105px;
@@ -333,6 +329,11 @@ body {
   .miner {
     width: 113px;
     height: 128px;
+  }
+
+  .bomb {
+    max-width: 80px;
+    max-height: 80px;
   }
 }
 
@@ -394,11 +395,21 @@ body {
   .bet_amount_cont {
     font-size: 26px;
   }
+
+  .bomb {
+    max-width: 90px;
+    max-height: 90px;
+  }
 }
 
 @media screen and (min-height: 1024px) {
   .miner {
     width: 162px;
     height: 194px;
+  }
+
+  .bomb {
+    max-width: 100px;
+    max-height: 100px;
   }
 }
